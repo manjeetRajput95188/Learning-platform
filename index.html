@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Button</title>
+    <meta name="theme-color" content="#6506ff">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .logo {
+            height: 55px;
+            margin-right: auto;
+        }
+
+        .threelines {
+            padding-bottom: 15px;
+            height: 30px;
+        }
+
+        .images {
+            display: flex;
+            padding: 2px 0px 2px 2px;
+            justify-content: flex-end; /* Align items to the right */
+        }
+
+        .images .threelines {
+            padding: 10px;
+            margin-left: 10px; /* Adjust margin as needed */
+        }
+
+        #languages {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            list-style: none;
+            height: 100dvh;
+            position: absolute; /* Positioning the menu absolutely */
+            right: 0; /* Aligning the menu to the right */
+        }
+
+        #languages li {
+            font-size: 20px;
+            width: 170px;
+            border: 2px solid black;
+            border-collapse: collapse;
+            background-color: #6506ff;
+            color: white;
+            font-weight: bolder;
+            padding-left: 15px;
+            padding-top: 15px;
+            height: 45px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="images">
+            <img src="logo.png" alt="" class="logo">
+            <img onclick="toggleMenu()" src="threelines.png" alt="" class="threelines">
+        </div>
+        <hr>
+        <div class="technologies">
+            <ul id="languages">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+    </header>
+    <main>
+    </main>
+    <aside>
+    </aside>
+    <footer>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("languages");
+            if (menu.style.display === "none") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
